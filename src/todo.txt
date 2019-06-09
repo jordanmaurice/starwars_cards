@@ -1,0 +1,5 @@
+ToDo StarWars App
+
+Get CSS going!!!
+We want 2 cards per line..
+Separate code from dataloader handling rendering to dataloader just getting the data, then passing the data to the appropriate components
