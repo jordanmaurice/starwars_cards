@@ -41,10 +41,17 @@ class DataLoader extends React.Component {
     return(
         data_returned.map(films => (
               <Card 
-                  name = {films.title}
-                  average_lifespan = {films.average_lifespan}
-                  classification = {films.classification}
-                  designation = {films.designation}
+                  data = {films}
+                  type = {this.props.root_choice}
+              />
+          ))    
+      );
+    case 'people':
+    return(
+        data_returned.map(people => (
+              <Card 
+                  data = {people}
+                  type = {this.props.root_choice}
               />
           ))    
       );
@@ -52,54 +59,35 @@ class DataLoader extends React.Component {
     return(
         data_returned.map(species => (
               <Card 
-                  name = {species.name}
-                  average_lifespan = {species.average_lifespan}
-                  classification = {species.classification}
-                  designation = {species.designation}
+                  data = {species}
+                  type = {this.props.root_choice}
               />
           ))    
       );
-    case 'species':
+        case 'planets':
     return(
-        data_returned.map(species => (
+        data_returned.map(planets => (
               <Card 
-                  name = {species.name}
-                  average_lifespan = {species.average_lifespan}
-                  classification = {species.classification}
-                  designation = {species.designation}
+                  data = {planets}
+                  type = {this.props.root_choice}
               />
           ))    
       );
-        case 'species':
+        case 'vehicles':
     return(
-        data_returned.map(species => (
+        data_returned.map(vehicles => (
               <Card 
-                  name = {species.name}
-                  average_lifespan = {species.average_lifespan}
-                  classification = {species.classification}
-                  designation = {species.designation}
+                  data = {vehicles}
+                  type = {this.props.root_choice}
               />
           ))    
       );
-        case 'species':
+        case 'starships':
     return(
-        data_returned.map(species => (
+        data_returned.map(starships => (
               <Card 
-                  name = {species.name}
-                  average_lifespan = {species.average_lifespan}
-                  classification = {species.classification}
-                  designation = {species.designation}
-              />
-          ))    
-      );
-        case 'species':
-    return(
-        data_returned.map(species => (
-              <Card 
-                  name = {species.name}
-                  average_lifespan = {species.average_lifespan}
-                  classification = {species.classification}
-                  designation = {species.designation}
+                  data = {starships}
+                  type = {this.props.root_choice}
               />
           ))    
       );

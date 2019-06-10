@@ -1,4 +1,12 @@
 .card_holder{
 	background-color: #444 !important; 
-	min-width: 500px !important;
+	min-width: 600px !important;
+	max-width: 600px;
+}
+.card_title{
+	background-color: #333 !important;
+}
+
+li{
+	text-decoration: none !important;
 }
