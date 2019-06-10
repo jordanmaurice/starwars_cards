@@ -17,3 +17,9 @@
 body{
   background-color: #000;
 }
+#root{
+
+  background-image: url("./bg.png") !important;
+  background-repeat: repeat;
+
+}  
