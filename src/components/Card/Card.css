@@ -1,14 +1,26 @@
 .card_holder{
-	background-color: #444 !important; 
+	background-color: black !important; 
 	min-width: 600px !important;
 	max-width: 600px;
-	border: 3px solid white !important;
+	border: 6px solid #FEDB01 !important;
 	border-radius: 25px !important;
+	margin: 15px;
 }
 .card_title{
-	background-color: #333 !important;
+	color: #FEDB01;
+	font-size: 24px;
+	font-family: 'MyFont', Fallback, sans-serif;
+}
+.card_description{
+	color: white;
+
 }
 
 li{
 	text-decoration: none !important;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(../../fonts/Starjedi.ttf) format('truetype');
 }

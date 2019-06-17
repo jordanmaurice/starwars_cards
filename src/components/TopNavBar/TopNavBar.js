@@ -77,7 +77,8 @@ class TopNavBar extends React.Component {
             </NavLink>
           </NavItem>
         </Nav>
-        <TabContent activeTab={this.state.activeTab}>
+        <TabContent activeTab={this.state.activeTab}
+        className = "cards-section">
           <TabPane tabId="1">
             <Row>
               <DataLoader 

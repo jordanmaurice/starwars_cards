@@ -23,3 +23,7 @@ body{
   background-repeat: repeat;
 
 }  
+
+.cards-section {
+  columns: 2 auto;
+}

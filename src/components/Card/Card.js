@@ -12,18 +12,15 @@ class SpeciesCard extends React.Component {
     console.log(this.props.type);
     if(this.props.type == "films"){
       return (
-
           <Col sm="12">
             <Card body
                 className="card_holder">
               <CardTitle
                 className="card_title">{this.props.data.title}</CardTitle>
               <CardText>
-              <ul>
-                  <li>Release Date: {this.props.data.release_date}</li>
-                  <li>Director: {this.props.data.director}</li>
-                  <li>{this.props.data.opening_crawl}</li>
-              </ul>
+              <div className = "card_description">
+                  {this.props.data.opening_crawl}
+              </div>
               </CardText>
             </Card>
           </Col>
@@ -37,8 +34,10 @@ class SpeciesCard extends React.Component {
           <Col sm="12">
             <Card body
                 className="card_holder">
-              <CardTitle>{this.props.data.name}</CardTitle>
-              <CardText>
+              <CardTitle
+                  className = "card_title">{this.props.data.name}</CardTitle>
+              <CardText
+                  className = "card_description">
                   <p>Classification: {this.props.data.classification}</p>
                   <p>Designation: {this.props.data.designation}</p>
                   <p>Average Lifespan: {this.props.data.average_lifespan}</p>
@@ -93,3 +92,7 @@ class SpeciesCard extends React.Component {
 }
 
 export default SpeciesCard;
+
+/*
+                  Release Date: {this.props.data.release_date}
+                  Director: {this.props.data.director}*/

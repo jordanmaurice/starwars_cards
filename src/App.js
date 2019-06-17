@@ -7,7 +7,8 @@ function App() {
     <div className="App">
         <div className="header">Star Wars</div>
         <TopNavBar  />
-
+        <div className = "cards-section">
+        </div>
     </div>
   );
 }

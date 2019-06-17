@@ -39,7 +39,7 @@ class DataLoader extends React.Component {
   switch(request_type) {
     case 'films':
     return(
-        data_returned.map(films => (
+        data_returned.sort((a, b) => a.episode_id - b.episode_id).splice(data_returned,6).map(films => (
               <Card 
                   data = {films}
                   type = {this.props.root_choice}
