@@ -11,10 +11,16 @@ class DataLoader extends React.Component {
     };
   }
 
+
+  
   componentDidMount() {
+    if(this.state.isLoaded){
+
+    }
+    else{
     const root_choice = this.props.root_choice;
     //const api_url = "https://swapi.co/api/" + {this.props.root_choice} + "/";
-    fetch("https://swapi.co/api/"+root_choice)
+    fetch("https://swapi.co/api/" + root_choice)
       .then(res => res.json())
       .then(
         (result) => {
@@ -30,12 +36,16 @@ class DataLoader extends React.Component {
           });
         }
       )
+    }
+
   }
 
   renderSwitch(request_type) {
   const { error, isLoaded, data_returned } = this.state;
   console.log(request_type);
   console.log(data_returned)    
+  
+
   switch(request_type) {
     case 'films':
     return(
@@ -114,20 +124,3 @@ class DataLoader extends React.Component {
 }
 
 export default DataLoader;
-/*
-
-    case 'starships'
-      return 'foo';
-    case 'species':
-      return 'bar';
-    case 'starships'
-      return 'foo';
-    case 'species':
-      return 'bar';
-    case 'starships'
-      return 'foo';
-    default:
-      return 'foo';
-        
-
-*/

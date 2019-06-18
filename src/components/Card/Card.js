@@ -9,8 +9,7 @@ class SpeciesCard extends React.Component {
 
   render() {
     console.log(this.props.data);
-    console.log(this.props.type);
-    if(this.props.type == "films"){
+    if(this.props.type === "films"){
       return (
           <Col sm="12">
             <Card body
@@ -28,7 +27,7 @@ class SpeciesCard extends React.Component {
     );
     }
 
-    if(this.props.type == "species"){
+    if(this.props.type ==="species"){
       return (
         <Row>
           <Col sm="12">
@@ -47,7 +46,7 @@ class SpeciesCard extends React.Component {
         </Row>
     );
     }
-    if(this.props.type == "people"){
+    if(this.props.type === "people"){
       return (
         <Row>
           <Col sm="12">
@@ -64,7 +63,7 @@ class SpeciesCard extends React.Component {
         </Row>
     );
     }
-    if(this.props.type == "planets"){
+    if(this.props.type === "planets"){
       return (
         <Row>
           <Col sm="12">

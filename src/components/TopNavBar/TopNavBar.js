@@ -3,6 +3,7 @@ import {TabContent, TabPane, Nav, NavItem, NavLink, Row} from 'reactstrap';
 import classnames from 'classnames';
 import DataLoader from '../../components/DataLoader/DataLoader'
 import './TopNavBar.css'
+
 class TopNavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,7 @@ class TopNavBar extends React.Component {
       });
     }
   }
+
   render() {
     return (
       <div>
@@ -77,48 +79,79 @@ class TopNavBar extends React.Component {
             </NavLink>
           </NavItem>
         </Nav>
-        <TabContent activeTab={this.state.activeTab}
-        className = "cards-section">
+        <TabContent
+            activeTab={this.state.activeTab}
+            mountOnEnter = {true}
+            className = "cards-section"
+            >
+
           <TabPane tabId="1">
             <Row>
-              <DataLoader 
-                  root_choice = "films"
-              />
+              <div className = "container">
+                {this.state.activeTab == 1 &&
+                  <DataLoader 
+                      root_choice = "films"
+                  />
+                }
+              </div>
             </Row>
           </TabPane>
+ 
           <TabPane tabId="2">
             <Row>
+            <div className = "container">
+            {this.state.activeTab == 2 &&
               <DataLoader 
                   root_choice = "people"
               />
+            }
+            </div>
             </Row>
           </TabPane>
           <TabPane tabId="3">
             <Row>
+            <div className = "container">
+            {this.state.activeTab == 3 &&
               <DataLoader 
                   root_choice = "species"
               />
+
+              }
+              </div>
             </Row>
           </TabPane>
           <TabPane tabId="4">
             <Row>
+            <div className = "container">
+            {this.state.activeTab == 4 &&
               <DataLoader 
                   root_choice = "planets"
               />
+
+              }
+              </div>
             </Row>
           </TabPane>
           <TabPane tabId="5">
             <Row>
+            <div className = "container">
+            {this.state.activeTab == 5 &&
               <DataLoader 
                   root_choice = "vehicles"
               />
+            }
+            </div>
             </Row>
           </TabPane>
           <TabPane tabId="6">
             <Row>
+            <div className = "container">
+            {this.state.activeTab == 6 &&
               <DataLoader 
                   root_choice = "starships"
               />
+            }
+            </div>
             </Row>
           </TabPane>
         </TabContent>
