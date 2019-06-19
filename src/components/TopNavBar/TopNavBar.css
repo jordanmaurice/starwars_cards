@@ -6,7 +6,7 @@
 	height: 100%;
 	border-radius: 0px !important;
 	color: #fff !important;
-		background-color: transparent !important;		
+	background-color: transparent !important;		
 	padding-top: 16px !important;
 }
 
@@ -20,11 +20,10 @@
 
 
 .cards-section {
-  columns: 2 auto		;
   height: 100vh;
   margin-top: 60px;
-
 }
+
 body{
 	height: 100vh;
 }
