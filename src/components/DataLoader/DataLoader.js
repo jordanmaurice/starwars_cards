@@ -15,9 +15,10 @@ class DataLoader extends React.Component {
   
   componentDidMount() {
     if(this.state.isLoaded){
-
+        console.log("component already loaded")
     }
     else{
+      console.log("Loading component...")
     const root_choice = this.props.root_choice;
     //const api_url = "https://swapi.co/api/" + {this.props.root_choice} + "/";
     fetch("https://swapi.co/api/" + root_choice)

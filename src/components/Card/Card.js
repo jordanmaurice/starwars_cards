@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardTitle, CardText, Row, Col } from 'reactstrap';
 import './Card.css';
+
 class SpeciesCard extends React.Component {
   constructor(props) {
     super(props);
@@ -16,10 +17,9 @@ class SpeciesCard extends React.Component {
                 className="card_holder">
               <CardTitle
                 className="card_title">{this.props.data.title}</CardTitle>
-              <CardText>
-              <div className = "card_description">
+              <CardText
+                  className = "card_description">
                   {this.props.data.opening_crawl}
-              </div>
               </CardText>
             </Card>
           </Col>
@@ -27,7 +27,7 @@ class SpeciesCard extends React.Component {
     );
     }
 
-    if(this.props.type ==="species"){
+    if(this.props.type === "species"){
       return (
         <Row>
           <Col sm="12">
@@ -52,8 +52,10 @@ class SpeciesCard extends React.Component {
           <Col sm="12">
             <Card body
                 className="card_holder">
-              <CardTitle>{this.props.data.name}</CardTitle>
-              <CardText>
+              <CardTitle
+                  className = "card_title">{this.props.data.name}</CardTitle>
+              <CardText
+                  className = "card_description">
                   <p>Birth Year: {this.props.data.birth_year}</p>
                   <p>Height: {this.props.data.height}</p>
                   <p>Mass: {this.props.data.mass}</p>
@@ -69,11 +71,57 @@ class SpeciesCard extends React.Component {
           <Col sm="12">
             <Card body
                 className="card_holder">
-              <CardTitle>{this.props.data.name}</CardTitle>
-              <CardText>
+              <CardTitle
+                  className = "card_title">{this.props.data.name}</CardTitle>
+              <CardText
+                  className = "card_description">
                   <p>Population: {this.props.data.population}</p>
                   <p>Climate: {this.props.data.climate}</p>
                   <p>Gravity: {this.props.data.gravity}</p>
+              </CardText>
+            </Card>
+          </Col>
+
+        </Row>
+    );
+    }
+        if(this.props.type === "vehicles"){
+      return (
+        <Row>
+          <Col sm="12">
+            <Card body
+                className="card_holder">
+              <CardTitle
+                  className = "card_title">{this.props.data.name}</CardTitle>
+              <CardText
+                  className = "card_description">
+                  <div>
+                  <p>Population: {this.props.data.population}</p>
+                  <p>Climate: {this.props.data.climate}</p>
+                  <p>Gravity: {this.props.data.gravity}</p>
+                  </div>
+              </CardText>
+            </Card>
+          </Col>
+
+        </Row>
+    );
+    }
+        if(this.props.type === "starships"){
+      return (
+        <Row>
+          <Col sm="12">
+            <Card body
+                className="card_holder">
+              <CardTitle
+                  className = "card_title">{this.props.data.name}</CardTitle>
+              <CardText
+                  className = "card_description">
+                  <ul style={{"listStyle": "none"}}>
+                  <li>Starship Class: <span>{this.props.data.starship_class}</span></li>
+                  <li>Manufacturer: <span>{this.props.data.manufacturer}</span></li>
+                  <li>Model: <span>{this.props.data.model}</span></li>
+                  </ul>
               </CardText>
             </Card>
           </Col>
