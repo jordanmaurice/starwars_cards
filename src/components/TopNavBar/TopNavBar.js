@@ -1,5 +1,5 @@
 import React from 'react';
-import {TabContent, TabPane, Nav, NavItem, NavLink, Row} from 'reactstrap';
+import {TabContent, TabPane, Nav, NavItem, NavLink, Row, CardColumns, CardDeck} from 'reactstrap';
 import classnames from 'classnames';
 import DataLoader from '../../components/DataLoader/DataLoader'
 import './TopNavBar.css'
@@ -87,71 +87,71 @@ class TopNavBar extends React.Component {
 
           <TabPane tabId="1">
             <Row>
-              <div className = "container">
                 {this.state.activeTab == 1 &&
+                  <CardColumns>
                   <DataLoader 
                       root_choice = "films"
                   />
+                  </CardColumns>                
                 }
-              </div>
             </Row>
           </TabPane>
  
           <TabPane tabId="2">
             <Row>
-            <div className = "container">
+                        <CardColumns>  
             {this.state.activeTab == 2 &&
               <DataLoader 
                   root_choice = "people"
               />
             }
-            </div>
+            </CardColumns>
             </Row>
           </TabPane>
           <TabPane tabId="3">
             <Row>
-            <div className = "container">
+            <CardColumns>  
             {this.state.activeTab == 3 &&
               <DataLoader 
                   root_choice = "species"
               />
 
               }
-              </div>
+            </CardColumns>  
             </Row>
           </TabPane>
           <TabPane tabId="4">
             <Row>
-            <div className = "container">
+            <CardColumns>  
             {this.state.activeTab == 4 &&
               <DataLoader 
                   root_choice = "planets"
               />
 
               }
-              </div>
+                         </CardColumns>  
             </Row>
           </TabPane>
           <TabPane tabId="5">
             <Row>
-            <div className = "container">
+            <CardColumns>  
             {this.state.activeTab == 5 &&
               <DataLoader 
                   root_choice = "vehicles"
               />
             }
-            </div>
+            </CardColumns>
             </Row>
           </TabPane>
           <TabPane tabId="6">
             <Row>
-            <div className = "container">
             {this.state.activeTab == 6 &&
+              <CardColumns>
               <DataLoader 
                   root_choice = "starships"
               />
+              </CardColumns>
             }
-            </div>
             </Row>
           </TabPane>
         </TabContent>

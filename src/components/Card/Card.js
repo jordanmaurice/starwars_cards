@@ -12,7 +12,7 @@ class SpeciesCard extends React.Component {
     console.log(this.props.data);
     if(this.props.type === "films"){
       return (
-          <Col sm="12">
+
             <Card body
                 className="card_holder">
               <CardTitle
@@ -22,15 +22,12 @@ class SpeciesCard extends React.Component {
                   {this.props.data.opening_crawl}
               </CardText>
             </Card>
-          </Col>
 
     );
     }
 
     if(this.props.type === "species"){
       return (
-        <Row>
-          <Col sm="12">
             <Card body
                 className="card_holder">
               <CardTitle
@@ -42,14 +39,10 @@ class SpeciesCard extends React.Component {
                   <p>Average Lifespan: {this.props.data.average_lifespan}</p>
               </CardText>
             </Card>
-          </Col>
-        </Row>
     );
     }
     if(this.props.type === "people"){
       return (
-        <Row>
-          <Col sm="12">
             <Card body
                 className="card_holder">
               <CardTitle
@@ -61,14 +54,10 @@ class SpeciesCard extends React.Component {
                   <p>Mass: {this.props.data.mass}</p>
               </CardText>
             </Card>
-          </Col>
-        </Row>
     );
     }
     if(this.props.type === "planets"){
       return (
-        <Row>
-          <Col sm="12">
             <Card body
                 className="card_holder">
               <CardTitle
@@ -80,15 +69,10 @@ class SpeciesCard extends React.Component {
                   <p>Gravity: {this.props.data.gravity}</p>
               </CardText>
             </Card>
-          </Col>
-
-        </Row>
     );
     }
         if(this.props.type === "vehicles"){
       return (
-        <Row>
-          <Col sm="12">
             <Card body
                 className="card_holder">
               <CardTitle
@@ -102,15 +86,10 @@ class SpeciesCard extends React.Component {
                   </div>
               </CardText>
             </Card>
-          </Col>
-
-        </Row>
     );
     }
         if(this.props.type === "starships"){
       return (
-        <Row>
-          <Col sm="12">
             <Card body
                 className="card_holder">
               <CardTitle
@@ -124,9 +103,6 @@ class SpeciesCard extends React.Component {
                   </ul>
               </CardText>
             </Card>
-          </Col>
-
-        </Row>
     );
     }
     else{
