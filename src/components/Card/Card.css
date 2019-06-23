@@ -4,6 +4,22 @@
 	max-width: 60%;
 	border: 4px solid #FEDB01 !important;
 	border-radius: 0px !important;
+	background: url(planets.svg) no-repeat bottom right;
+	background-size: 100px	 100px;
+	text-align: left;
+	background-origin: 	content-box;	
+}
+.card_holder ul{
+	padding-left: 2px;
+	list-style: none;
+}
+
+.card_holder li{
+	font-family: 'Gotham', Fallback, sans-serif;
+}
+
+.card_holder span{
+	color: gray;
 }
 .card_title{
 	color: #FEDB01;
@@ -23,3 +39,8 @@ li{
   font-family: 'MyFont';
   src: local('MyFont'), url(../../fonts/Starjedi.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'Gotham';
+  src: local('Gotham'), url(../../fonts/GothamMedium.ttf) format('truetype');
+ }

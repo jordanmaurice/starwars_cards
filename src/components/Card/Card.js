@@ -34,9 +34,8 @@ class SpeciesCard extends React.Component {
                   className = "card_title">{this.props.data.name}</CardTitle>
               <CardText
                   className = "card_description">
-                  <ul style={{"listStyle": "none", "paddingLeft": "2px"}}
-                      className = "text-left">
-                  <li>Classification: {this.props.data.classification}</li>
+                  <ul>
+                  <li><b>Classification:</b> {this.props.data.classification}</li>
                   <li>Designation: {this.props.data.designation}</li>
                   <li>Average Lifespan: {this.props.data.average_lifespan}</li>
                   </ul>
@@ -52,7 +51,7 @@ class SpeciesCard extends React.Component {
                   className = "card_title">{this.props.data.name}</CardTitle>
               <CardText
                   className = "card_description">
-                  <ul style={{"listStyle": "none"}}>
+                  <ul>
                   <li>Birth Year: <span>{this.props.data.birth_year}</span></li>
                   <li>Height: <span>{this.props.data.height}</span></li>
                   <li>Mass: <span>{this.props.data.mass}</span></li>
@@ -69,7 +68,7 @@ class SpeciesCard extends React.Component {
                   className = "card_title">{this.props.data.name}</CardTitle>
               <CardText
                   className = "card_description">
-                  <ul style={{"listStyle": "none"}}>
+                  <ul>
                   <li>Population: <span>{this.props.data.population}</span></li>
                   <li>Climate: <span>{this.props.data.climate}</span></li>
                   <li>Gravity: <span>{this.props.data.gravity}</span></li>
@@ -86,7 +85,7 @@ class SpeciesCard extends React.Component {
                   className = "card_title">{this.props.data.name}</CardTitle>
               <CardText
                   className = "card_description">
-                  <ul style={{"listStyle": "none"}}>
+                  <ul>
                   <li>Model: <span>{this.props.data.model}</span></li>
                   <li>Manufacturer: <span>{this.props.data.manufacturer}</span></li>
                   <li>Vehicle Class: <span>{this.props.data.vehicle_class}</span></li>
