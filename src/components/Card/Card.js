@@ -34,9 +34,12 @@ class SpeciesCard extends React.Component {
                   className = "card_title">{this.props.data.name}</CardTitle>
               <CardText
                   className = "card_description">
-                  <p>Classification: {this.props.data.classification}</p>
-                  <p>Designation: {this.props.data.designation}</p>
-                  <p>Average Lifespan: {this.props.data.average_lifespan}</p>
+                  <ul style={{"listStyle": "none", "paddingLeft": "2px"}}
+                      className = "text-left">
+                  <li>Classification: {this.props.data.classification}</li>
+                  <li>Designation: {this.props.data.designation}</li>
+                  <li>Average Lifespan: {this.props.data.average_lifespan}</li>
+                  </ul>
               </CardText>
             </Card>
     );
@@ -49,9 +52,11 @@ class SpeciesCard extends React.Component {
                   className = "card_title">{this.props.data.name}</CardTitle>
               <CardText
                   className = "card_description">
-                  <p>Birth Year: {this.props.data.birth_year}</p>
-                  <p>Height: {this.props.data.height}</p>
-                  <p>Mass: {this.props.data.mass}</p>
+                  <ul style={{"listStyle": "none"}}>
+                  <li>Birth Year: <span>{this.props.data.birth_year}</span></li>
+                  <li>Height: <span>{this.props.data.height}</span></li>
+                  <li>Mass: <span>{this.props.data.mass}</span></li>
+                  </ul>
               </CardText>
             </Card>
     );
@@ -64,9 +69,11 @@ class SpeciesCard extends React.Component {
                   className = "card_title">{this.props.data.name}</CardTitle>
               <CardText
                   className = "card_description">
-                  <p>Population: {this.props.data.population}</p>
-                  <p>Climate: {this.props.data.climate}</p>
-                  <p>Gravity: {this.props.data.gravity}</p>
+                  <ul style={{"listStyle": "none"}}>
+                  <li>Population: <span>{this.props.data.population}</span></li>
+                  <li>Climate: <span>{this.props.data.climate}</span></li>
+                  <li>Gravity: <span>{this.props.data.gravity}</span></li>
+                  </ul>
               </CardText>
             </Card>
     );
@@ -79,11 +86,12 @@ class SpeciesCard extends React.Component {
                   className = "card_title">{this.props.data.name}</CardTitle>
               <CardText
                   className = "card_description">
-                  <div>
-                  <p>Population: {this.props.data.population}</p>
-                  <p>Climate: {this.props.data.climate}</p>
-                  <p>Gravity: {this.props.data.gravity}</p>
-                  </div>
+                  <ul style={{"listStyle": "none"}}>
+                  <li>Model: <span>{this.props.data.model}</span></li>
+                  <li>Manufacturer: <span>{this.props.data.manufacturer}</span></li>
+                  <li>Vehicle Class: <span>{this.props.data.vehicle_class}</span></li>
+
+                  </ul>
               </CardText>
             </Card>
     );

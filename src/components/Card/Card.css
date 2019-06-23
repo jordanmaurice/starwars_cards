@@ -2,8 +2,8 @@
 	background-color: black !important; 
 	min-width: 400px !important;
 	max-width: 60%;
-	border: 6px solid #FEDB01 !important;
-	border-radius: 25px !important;
+	border: 4px solid #FEDB01 !important;
+	border-radius: 0px !important;
 }
 .card_title{
 	color: #FEDB01;
@@ -12,6 +12,7 @@
 }
 .card_description{
 	color: white;
+	align-content: left;
 }
 
 li{
