@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardTitle, CardText, Row, Col } from 'reactstrap';
 import './Card.css';
+import classnames from 'classnames';
 
 class SpeciesCard extends React.Component {
   constructor(props) {
@@ -10,9 +11,28 @@ class SpeciesCard extends React.Component {
 
   render() {
     console.log(this.props.data);
-    if(this.props.type === "films"){
-      return (
 
+var sharshipBG = require('./starships.svg')
+var vehiclesBG = require('./vehicles.svg')
+
+var starshipStyle = {
+    background: 'url(' + sharshipBG + ') no-repeat bottom right',
+    backgroundOrigin:  'content-box',  
+    backgroundSize: '100px 100px'
+}
+
+
+var bg_link
+
+var cardStyle = {
+    background: 'url(' + bg_link + ') no-repeat bottom right',
+    backgroundOrigin:  'content-box',  
+    backgroundSize: '100px 100px'
+}
+
+    if(this.props.type === "films"){
+
+      return (
             <Card body
                 className="card_holder">
               <CardTitle
@@ -31,13 +51,13 @@ class SpeciesCard extends React.Component {
             <Card body
                 className="card_holder">
               <CardTitle
-                  className = "card_title">{this.props.data.name}</CardTitle>
+                  className = "card_title">{this.props.data.name.toUpperCase()}</CardTitle>
               <CardText
                   className = "card_description">
                   <ul>
-                  <li><b>Classification:</b> {this.props.data.classification}</li>
-                  <li>Designation: {this.props.data.designation}</li>
-                  <li>Average Lifespan: {this.props.data.average_lifespan}</li>
+                  <li>CLASSIFICATION: <span>{this.props.data.classification.toUpperCase()}</span></li>
+                  <li>DESIGNATION: <span>{this.props.data.designation.toUpperCase()}</span></li>
+                  <li>AVERAGE LIFESPAN: <span>{this.props.data.average_lifespan.toUpperCase()}</span></li>
                   </ul>
               </CardText>
             </Card>
@@ -78,9 +98,11 @@ class SpeciesCard extends React.Component {
     );
     }
         if(this.props.type === "vehicles"){
+bg_link = vehiclesBG
       return (
             <Card body
-                className="card_holder">
+                className="card_holder"
+                style = {cardStyle}>
               <CardTitle
                   className = "card_title">{this.props.data.name}</CardTitle>
               <CardText
@@ -96,14 +118,18 @@ class SpeciesCard extends React.Component {
     );
     }
         if(this.props.type === "starships"){
+        bg_link = sharshipBG
       return (
-            <Card body
-                className="card_holder">
+
+            <Card 
+                body
+                className="card_holder"
+                style = {cardStyle}>
               <CardTitle
                   className = "card_title">{this.props.data.name}</CardTitle>
               <CardText
                   className = "card_description">
-                  <ul style={{"listStyle": "none"}}>
+                  <ul>
                   <li>Starship Class: <span>{this.props.data.starship_class}</span></li>
                   <li>Manufacturer: <span>{this.props.data.manufacturer}</span></li>
                   <li>Model: <span>{this.props.data.model}</span></li>
@@ -125,4 +151,5 @@ export default SpeciesCard;
 
 /*
                   Release Date: {this.props.data.release_date}
-                  Director: {this.props.data.director}*/
+                  Director: {this.props.data.director}
+                  {{"background": "url(starships.svg) no-repeat bottom right !important"}}*/

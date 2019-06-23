@@ -4,7 +4,7 @@
   color: #fff;
   background-color: #252120;
   text-align: center;
-  margin: 0 autos;
+  margin: 0 auto;
   border-bottom: 3px solid #333;
 }
 .content{
@@ -23,3 +23,6 @@ body{
   background-repeat: repeat;
 
 }  
+html{
+  width: 100%;
+}

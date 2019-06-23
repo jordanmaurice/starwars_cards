@@ -16,7 +16,10 @@
 	border-left:2px solid #333 !important;
 	border-right: 2px solid #333 !important;
 	border-radius: 0px;
+	font-family: 'Gotham', Fallback, sans-serif;
+	font-size: 22px;
 }
+
 
 
 .cards-section {
@@ -27,3 +30,8 @@
 body{
 	height: 100vh;
 }
+
+@font-face {
+  font-family: 'Gotham';
+  src: local('Gotham'), url(../../fonts/PathwayGothicOne-Regular.ttf) format('truetype');
+ }

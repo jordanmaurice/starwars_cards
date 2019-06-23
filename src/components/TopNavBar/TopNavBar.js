@@ -98,7 +98,7 @@ class TopNavBar extends React.Component {
           </TabPane>
  
           <TabPane tabId="2">
-            <Row>
+            <Row className = "no-gutters">
                         <CardColumns>  
             {this.state.activeTab == 2 &&
               <DataLoader 
