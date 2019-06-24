@@ -1,4 +1,4 @@
-
+ 
 import React from 'react';
 import { Card, CardTitle, CardText, Row, Col } from 'reactstrap';
 import './Card.css';
